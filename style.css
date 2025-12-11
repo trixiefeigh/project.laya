@@ -1,0 +1,333 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fafafa; /* Default background; can be overridden per page if needed */
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #000;
+  color: #fff;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f4f4f4; /* Default; overridden in about to #333 */
+}
+
+/* Sections */
+.section {
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Pillar Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #f0c040; /* Added color for consistency */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 30px;
+  background: #333;
+  color: #fff;
+  border-radius: 12px;
+  margin: 40px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.pop {
+  animation: popIn 0.7s ease;
+}
+
+.slide {
+  animation: slideIn 1s ease;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+
+/* About Page Specific */
+body.about {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.about .hero {
+  background: #333;
+  color: white;
+}
+
+.focus, .quick-access, .join {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.focus-grid, .qa-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px 40px;
+}
+
+.qa-card {
+  background: #eee;
+}
+
+/* Buttons */
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+/* Join section */
+.join {
+  background: #333;
+  color: white;
+}
+
+.join-buttons button {
+  background: #f0c040;
+  color: black;
+  font-weight: bold;
+}
+
+.join-buttons button:hover {
+  background: #ffdd66;
+}
+
+/* Learn Page Specific */
+body.learn {
+  background: #f5f5f5;
+}
+
+/* TOP NAV */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: black;
+  color: white;
+}
+
+.topnav nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* HEADER SECTION */
+.page-header {
+  padding: 50px;
+  text-align: center;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  gap: 30px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+  margin-top: 10px;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: black;
+  text-decoration: none;
+}
+
+.help-box {
+  margin-top: 30px;
+  padding: 15px;
+  background: #e8e8e8;
+  border-radius: 10px;
+}
+
+main {
+  flex: 1;
+}
+
+.content-section {
+  background: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.info-img {
+  width: 300px;
+  margin-top: 15px;
+  border-radius: 12px;
+}
+
+/* Cards (Learn page) */
+.learn .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.learn .card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.learn .card:hover {
+  transform: translateY(-8px);
+}
+
+.card-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Additional Animations for Learn */
+.slide-in {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 1s forwards;
+}
